@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Субботин — Колпаки из нержавейки для грузовиков</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">СУББОТИН</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-tab="catalog">Каталог</a>
+                <a href="#" class="nav-link" data-tab="about">О компании</a>
+                <a href="#" class="nav-link" data-tab="contacts">Контакты</a>
+            </nav>
+            <button class="cart-btn" id="cartBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Вкладка: Каталог -->
+    <section class="tab-content active" id="tab-catalog">
+        <div class="hero">
+            <div class="container">
+                <h1 class="hero-title">Колпаки из нержавеющей стали<br>для грузовых автомобилей</h1>
+                <p class="hero-subtitle">Профессиональные колпаки R22.5 для Scania, Volvo, DAF, Mercedes, КАМАЗ и других марок. Доставка по России.</p>
+                <a href="#products" class="hero-btn">Смотреть каталог</a>
+            </div>
+        </div>
+
+        <div class="container" id="products">
+            <div class="section-header">
+                <h2 class="section-title">Каталог товаров</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="caps">Колпаки</button>
+                    <button class="filter-btn" data-filter="accessories">Аксессуары</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Товары загружаются через JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Вкладка: О компании -->
+    <section class="tab-content" id="tab-about">
+        <div class="container about-section">
+            <h2 class="section-title">О компании</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Надёжность</h3>
+                    <p>Работаем с 2010 года. Более 15 лет опыта в поставке комплектующих для грузового транспорта.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Качество</h3>
+                    <p>Только нержавеющая сталь высокого качества. Колпаки устойчивы к коррозии и механическим повреждениям.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Доставка</h3>
+                    <p>Отправляем заказы по всей России. Самовывоз из Гороховца Владимирской области.</p>
+                </div>
+            </div>
+
+            <div class="about-info">
+                <h3>Реквизиты</h3>
+                <div class="requisites">
+                    <div class="req-row">
+                        <span class="req-label">ИП</span>
+                        <span class="req-value">Субботин Алексей Евгеньевич</span>
+                    </div>
+                    <div class="req-row">
+                        <span class="req-label">ОГРНИП</span>
+                        <span class="req-value">310333835400022 от 20.12.2010</span>
+                    </div>
+                    <div class="req-row">
+                        <span class="req-label">ИНН</span>
+                        <span class="req-value">333801371306</span>
+                    </div>
+                    <div class="req-row">
+                        <span class="req-label">Адрес</span>
+                        <span class="req-value">Владимирская область, Гороховецкий район, г. Гороховец</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вкладка: Контакты -->
+    <section class="tab-content" id="tab-contacts">
+        <div class="container contacts-section">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>Телефон</h3>
+                    <p class="contact-value">+7 (XXX) XXX-XX-XX</p>
+                    <p class="contact-note">Пн–Пт: 9:00 – 18:00</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3>Электронная почта</h3>
+                    <p class="contact-value">info@subbotin-shop.ru</p>
+                    <p class="contact-note">Ответим в течение 24 часов</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Адрес</h3>
+                    <p class="contact-value">Владимирская обл.,<br>Гороховецкий район,<br>г. Гороховец</p>
+                    <p class="contact-note">Самовывоз по договорённости</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Написать нам</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+                    <input type="email" placeholder="Электронная почта" required>
+                    <textarea placeholder="Сообщение" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно корзины -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Корзина</h3>
+                <button class="modal-close" id="cartClose">&times;</button>
+            </div>
+            <div class="modal-body" id="cartBody">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+            <div class="modal-footer" id="cartFooter" style="display:none;">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> &#8381;</div>
+                <button class="checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <div class="logo">
+                    <span class="logo-icon">S</span>
+                    <span class="logo-text">СУББОТИН</span>
+                </div>
+                <p class="footer-desc">Колпаки из нержавеющей стали для грузовых автомобилей. Качество, проверенное временем.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <a href="#" data-tab="catalog">Каталог</a>
+                <a href="#" data-tab="about">О компании</a>
+                <a href="#" data-tab="contacts">Контакты</a>
+            </div>
+            <div class="footer-col">
+                <h4>Реквизиты</h4>
+                <p>ИП Субботин А.Е.</p>
+                <p>ОГРНИП 310333835400022</p>
+                <p>ИНН 333801371306</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2010–2026 ИП Субботин Алексей Евгеньевич. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
