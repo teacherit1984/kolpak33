@@ -51,9 +51,7 @@
                     <button class="filter-btn" data-filter="accessories">Аксессуары</button>
                 </div>
             </div>
-            <div class="products-grid" id="productsGrid">
-                <!-- Товары загружаются через JS -->
-            </div>
+            <div class="products-grid" id="productsGrid"></div>
         </div>
     </section>
 
@@ -128,7 +126,7 @@
                         </svg>
                     </div>
                     <h3>Телефон</h3>
-                    <p class="contact-value">+7 (XXX) XXX-XX-XX</p>
+                    <p class="contact-value">+7 (900) 123-45-67</p>
                     <p class="contact-note">Пн–Пт: 9:00 – 18:00</p>
                 </div>
                 <div class="contact-card">
@@ -169,6 +167,75 @@
         </div>
     </section>
 
+    <!-- Модальное окно товара -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal modal-product">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Товар</h3>
+                <button class="modal-close" id="productClose">&times;</button>
+            </div>
+            <div class="modal-body product-modal-body">
+                <div class="product-modal-img">
+                    <img id="productModalImg" src="" alt="">
+                </div>
+                <div class="product-modal-info">
+                    <h2 id="productModalName"></h2>
+                    <div class="product-modal-price" id="productModalPrice"></div>
+                    <div class="product-modal-desc">
+                        <h4>Описание</h4>
+                        <p id="productModalDesc"></p>
+                    </div>
+                    <div class="product-modal-specs">
+                        <h4>Характеристики</h4>
+                        <ul id="productModalSpecs"></ul>
+                    </div>
+                    <div class="product-modal-location">
+                        Адрес: Владимирская обл., Гороховецкий район, г. Гороховец
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="add-to-cart-big" id="productAddToCart">В корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно оформления заказа -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal modal-order">
+            <div class="modal-header">
+                <h3>Оформление заказа</h3>
+                <button class="modal-close" id="orderClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary" id="orderSummary"></div>
+                <form class="order-form" id="orderForm">
+                    <input type="text" id="orderName" placeholder="Ваше имя *" required>
+                    <input type="tel" id="orderPhone" placeholder="Телефон *" required>
+                    <input type="email" id="orderEmail" placeholder="Электронная почта">
+                    <textarea id="orderComment" placeholder="Комментарий к заказу (адрес доставки, способ оплаты)" rows="4"></textarea>
+                    <button type="submit" class="submit-btn">Отправить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения заказа -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal modal-success">
+            <div class="modal-body success-body">
+                <div class="success-icon">OK</div>
+                <h3>Заказ оформлен!</h3>
+                <p class="success-text">Спасибо за заказ! Мы свяжемся с вами в ближайшее время для подтверждения.</p>
+                <div class="success-phone">
+                    <p>Или позвоните нам напрямую:</p>
+                    <a href="tel:+79001234567" class="success-phone-link">+7 (900) 123-45-67</a>
+                </div>
+                <button class="submit-btn" id="successClose">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Модальное окно корзины -->
     <div class="modal-overlay" id="cartModal">
         <div class="modal">
@@ -180,8 +247,8 @@
                 <p class="cart-empty">Корзина пуста</p>
             </div>
             <div class="modal-footer" id="cartFooter" style="display:none;">
-                <div class="cart-total">Итого: <span id="cartTotal">0</span> &#8381;</div>
-                <button class="checkout-btn">Оформить заказ</button>
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> руб.</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
             </div>
         </div>
     </div>
@@ -211,7 +278,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2010–2026 ИП Субботин Алексей Евгеньевич. Все права защищены.</p>
+                <p>© 2010–2026 ИП Субботин Алексей Евгеньевич. Все права защищены.</p>
             </div>
         </div>
     </footer>
